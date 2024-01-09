@@ -45,4 +45,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/project-backend:${{ github.sha }}
             docker stop project-backend
             docker rm project-backend
-            docker run -d --name project-backend -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/project_backend:${{ github.sha }}
+            docker run -d --name project-backend -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/project-backend:${{ github.sha }}
